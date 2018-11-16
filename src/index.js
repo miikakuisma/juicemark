@@ -1,12 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import { render } from 'react-dom'
+import { Juicemark } from './Juicemark'
+import './styles.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const App = () => (
+  <div id='app'>
+    <Juicemark
+      autorun={false}
+      silent={false}
+      onStart={() => {
+        // console.log('Test started')
+      }}
+      onProgress={(progress) => {
+        // console.log(`Progress: ${progress}%`)
+      }}
+      onComplete={(score) => {
+        // console.log(`Performance score: ${score}`)
+      }}
+    />
+  </div>
+)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+render(<App />, document.getElementById('root'))
