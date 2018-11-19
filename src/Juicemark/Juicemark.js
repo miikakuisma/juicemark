@@ -61,7 +61,7 @@ class Juicemark extends React.Component {
           <span>JuiceMark</span>
           <span>{this.state.score ? `Score: ${this.state.score}` : this.state.running ? 'running test...' : null}</span>
         </Header>
-        { !autorun && <Button busy={this.state.running && 'busy'} onClick={this.run.bind(this)} /> }
+        { !autorun && <Button busy={this.state.running} onClick={this.run.bind(this)} /> }
         <Meter>
           <ProgressContainer>
             { stack }
