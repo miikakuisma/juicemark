@@ -5,6 +5,10 @@ Light-weight React component for testing browser performance.
 ##### About
 This very simple benchmark puts some pressure on DOM/state rendering in order to determine a rough estimation about the client-side performance. Smaller number = faster client.
 
+## Demo
+
+Visit [juicemark.netlify.com](https://juicemark.netlify.com)
+
 ## Install
 
 Clone the repository
